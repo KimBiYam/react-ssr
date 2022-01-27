@@ -10,7 +10,7 @@ import App from "../src/App";
 const PORT = process.env.PORT || 8080;
 const app = express();
 
-app.use("*", (req, res) => {
+app.get("/", (req, res) => {
   const app = ReactDOMServer.renderToString(<App />);
   const indexFile = path.resolve("./build/index.html");
 
